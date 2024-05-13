@@ -1,0 +1,12 @@
+load abc;
+abc=int8(abc);
+AA=[];
+for i=1:33
+    tempA=zeros(33,33);
+    for j=1:33
+        if abc(i,j)~=0
+            tempA(j,abc(j,i))=1;
+        end
+    end
+    AA=[AA;tempA];
+end
